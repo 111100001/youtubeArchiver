@@ -38,5 +38,8 @@ with open(results_path, "w") as f, open(archive_path, "r") as archive:
     for video in videos:
         video_id = video.get('videoId')
         if video_id and video_id not in archived_videos:
-            f.write(f'\ntubeup -a --cookies=/home/ubuntu/PycharmProjects/cookiesRefresher/cookies.txt "{video_id}"')
+            f.write(f'\ntubeup -a --cookies=/home/ubuntu/PycharmProjects/cookiesRefresher/cookies.txt https://www.youtube.com/watch?v={video_id}')
             print(video_id)
+    f.write("\nexit")
+    
+os.chmod(results_path, 0o755)
