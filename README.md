@@ -5,5 +5,5 @@ program to upload the videos of a channel to the internet archives if they don't
 
 ## warning
 
-you need to edit this line to suit your needs:             f.write(f'\ntubeup -a --cookies=/home/ubuntu/PycharmProjects/cookiesRefresher/cookies.txt "{video_id}"')
+you need to edit this line to suit your needs:             `f.write(f'\ntubeup -a --cookies=/home/ubuntu/PycharmProjects/cookiesRefresher/cookies.txt "{video_id}"')`
 remove the cookies arg
