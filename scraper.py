@@ -28,13 +28,10 @@ else:
     archived_videos = set()
     
     
-# Empty the results file before the next run
-with open(results_path, "w") as f:
-    f.write("#!bin/sh \n")
-    
     
 # Open files using context managers to ensure they are properly closed
 with open(results_path, "w") as f, open(archive_path, "r") as archive:
+    f.write("#!bin/sh \n")
     for video in videos:
         video_id = video.get('videoId')
         if video_id and video_id not in archived_videos:
